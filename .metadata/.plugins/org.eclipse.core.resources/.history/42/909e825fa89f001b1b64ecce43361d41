@@ -1,0 +1,36 @@
+package com.swapi;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import okhttp3.OkHttpClient;
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Response;
+import retrofit2.Callback;
+public class Main {
+
+	public static void main(String[] args) throws IOException{
+		
+		final String BASE_URL = "http://swapi.co/api/";
+		Retrofit retrofit = new Retrofit.Builder()
+				.baseUrl(BASE_URL)
+				.client(new OkHttpClient())
+				.addConverterFactory(GsonConverterFactory.create())
+				.build();
+		
+		SWAPIService swapiService = retrofit.create(SWAPIService.class);
+		
+		swapiService.getPeople(1, new Callback<People>() {
+			@Override
+			public void success(People people, Response response) {
+				System.out.println(people.name());
+			}
+			
+			@Override
+			public void failure(RetrofitError error) {
+				
+			}
+		});
+	}
+}

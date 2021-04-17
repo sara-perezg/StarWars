@@ -1,0 +1,38 @@
+package com.swapi;
+
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+/**
+*
+* @author Zygimantus
+* @param <T>
+*/
+public class SWModelList<T> implements Serializable {
+	
+    private int count;
+    private String next;
+    private String previous;
+    private ArrayList<T> results;
+
+    
+    public SWModelList() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public SWModelList(int count, String next, String previous, ArrayList<T> results) {
+		super();
+		this.count = count;
+		this.next = next;
+		this.previous = previous;
+		this.results = results;
+	}
+
+
+	public boolean hasMore() {
+        return (next != null && next.length() != 0);
+    }
+}

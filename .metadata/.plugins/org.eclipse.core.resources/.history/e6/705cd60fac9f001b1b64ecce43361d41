@@ -1,0 +1,11 @@
+package com.swapi;
+
+
+/**
+*
+* @author Zygimantus
+* @param <T>
+*/
+public class SWModelList {
+
+}

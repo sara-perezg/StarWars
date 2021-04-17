@@ -1,0 +1,14 @@
+package com.swapi;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+
+
+public interface SWAPIService {
+
+	@GET("people/{id}")
+	Call<String> getPeople(@Path("id") int peopleId,Callback<People> callback);
+}

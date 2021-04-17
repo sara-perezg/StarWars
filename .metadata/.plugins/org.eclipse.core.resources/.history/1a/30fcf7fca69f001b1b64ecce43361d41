@@ -1,0 +1,22 @@
+package com.swapi;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import okhttp3.OkHttpClient;
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Response;
+public class Main {
+
+	public static void main(String[] args) throws IOException{
+		
+		final String BASE_URL = "http://swapi.co/api/people/1";
+		Retrofit retrofit = new Retrofit.Builder()
+				.baseUrl(BASE_URL)
+				.client(new OkHttpClient())
+				.addConverterFactory(GsonConverterFactory.create())
+				.build();
+		
+	}
+}

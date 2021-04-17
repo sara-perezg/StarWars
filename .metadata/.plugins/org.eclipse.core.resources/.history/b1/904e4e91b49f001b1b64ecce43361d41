@@ -1,0 +1,27 @@
+package com.swapi;
+
+import java.io.Serializable;
+import java.util.List;
+import com.google.gson.annotations.SerializedName;
+public class Starships implements Serializable{
+
+    private String name;
+    private String model;
+    private String manufacturer;
+    private String cost_in_credits;
+    private String length;
+    private String max_atmosphering_speed;
+    private String crew;
+    private String passengers;
+    private String cargo_capacity;
+    private String consumables;
+    private String hyperdrive_rating;
+    @SerializedName("MGLT")
+    private String mglt;
+    private String starship_class;
+    private List<Object> pilots;
+    private List<String> films;
+    private String created;
+    private String edited;
+    private String url;
+}

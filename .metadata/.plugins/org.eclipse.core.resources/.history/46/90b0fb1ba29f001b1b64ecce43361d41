@@ -1,0 +1,24 @@
+package com.swapi;
+
+import retrofit2.Retrofit;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
+
+import java.io.IOException;
+
+import retrofit2.Call;
+import retrofit2.Response;
+public class Main {
+
+	public static void main(String[] args){
+		
+		Retrofit retrofit = new Retrofit.Builder()
+				.baseUrl("http://localhost:8080/")
+				.addConverterFactory(ScalarsConverterFactory.create())
+				.build();
+		
+		QuoteAPIService quoteAPIService = retrofit.create(QuoteAPIService.class);
+		final Call<String> call = quoteAPIService.quote();
+		final Response<String> response = call.execute();
+		
+	}
+}

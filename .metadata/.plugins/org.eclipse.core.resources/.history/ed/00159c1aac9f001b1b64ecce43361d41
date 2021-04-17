@@ -1,0 +1,14 @@
+package com.swapi;
+
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+/**
+*
+* @author Zygimantus
+* @param <T>
+*/
+public class SWModelList<T> {
+
+}
