@@ -3,38 +3,44 @@ package com.swapi;
 import java.io.Serializable;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Planet implements Serializable{
 
     private String name;
-    private String rotation_period;
-    private String orbital_period;
+    @SerializedName("rotation_period")
+    private String rotationPeriod;
+    @SerializedName("orbital_period")
+    private String orbitalPeriod;
     private String diameter;
     private String climate;
     private String gravity;
     private String terrain;
-    private String surface_water;
+    @SerializedName("surface_water")
+    private String surfaceWater;
     private String population;
     private List<String> residents;
     private List<String> films;
     private String created;
     private String edited;
     private String url;
+    
 	public Planet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Planet(String name, String rotation_period, String orbital_period, String diameter, String climate,
-			String gravity, String terrain, String surface_water, String population, List<String> residents,
+	public Planet(String name, String rotationPeriod, String orbitalPeriod, String diameter, String climate,
+			String gravity, String terrain, String surfaceWater, String population, List<String> residents,
 			List<String> films, String created, String edited, String url) {
 		super();
 		this.name = name;
-		this.rotation_period = rotation_period;
-		this.orbital_period = orbital_period;
+		this.rotationPeriod = rotationPeriod;
+		this.orbitalPeriod = orbitalPeriod;
 		this.diameter = diameter;
 		this.climate = climate;
 		this.gravity = gravity;
 		this.terrain = terrain;
-		this.surface_water = surface_water;
+		this.surfaceWater = surfaceWater;
 		this.population = population;
 		this.residents = residents;
 		this.films = films;
@@ -48,17 +54,17 @@ public class Planet implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getRotation_period() {
-		return rotation_period;
+	public String getRotationPeriod() {
+		return rotationPeriod;
 	}
-	public void setRotation_period(String rotation_period) {
-		this.rotation_period = rotation_period;
+	public void setRotationPeriod(String rotationPeriod) {
+		this.rotationPeriod = rotationPeriod;
 	}
-	public String getOrbital_period() {
-		return orbital_period;
+	public String getOrbitalPeriod() {
+		return orbitalPeriod;
 	}
-	public void setOrbital_period(String orbital_period) {
-		this.orbital_period = orbital_period;
+	public void setOrbitalPeriod(String orbitalPeriod) {
+		this.orbitalPeriod = orbitalPeriod;
 	}
 	public String getDiameter() {
 		return diameter;
@@ -84,11 +90,11 @@ public class Planet implements Serializable{
 	public void setTerrain(String terrain) {
 		this.terrain = terrain;
 	}
-	public String getSurface_water() {
-		return surface_water;
+	public String getSurfaceWater() {
+		return surfaceWater;
 	}
-	public void setSurface_water(String surface_water) {
-		this.surface_water = surface_water;
+	public void setSurfaceWater(String surfaceWater) {
+		this.surfaceWater = surfaceWater;
 	}
 	public String getPopulation() {
 		return population;
@@ -128,9 +134,9 @@ public class Planet implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Planet [name=" + name + ", rotation_period=" + rotation_period + ", orbital_period=" + orbital_period
+		return "Planet [name=" + name + ", rotationPeriod=" + rotationPeriod + ", orbitalPeriod=" + orbitalPeriod
 				+ ", diameter=" + diameter + ", climate=" + climate + ", gravity=" + gravity + ", terrain=" + terrain
-				+ ", surface_water=" + surface_water + ", population=" + population + ", residents=" + residents
+				+ ", surfaceWater=" + surfaceWater + ", population=" + population + ", residents=" + residents
 				+ ", films=" + films + ", created=" + created + ", edited=" + edited + ", url=" + url + "]";
 	}
 	@Override
@@ -144,11 +150,11 @@ public class Planet implements Serializable{
 		result = prime * result + ((films == null) ? 0 : films.hashCode());
 		result = prime * result + ((gravity == null) ? 0 : gravity.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((orbital_period == null) ? 0 : orbital_period.hashCode());
+		result = prime * result + ((orbitalPeriod == null) ? 0 : orbitalPeriod.hashCode());
 		result = prime * result + ((population == null) ? 0 : population.hashCode());
 		result = prime * result + ((residents == null) ? 0 : residents.hashCode());
-		result = prime * result + ((rotation_period == null) ? 0 : rotation_period.hashCode());
-		result = prime * result + ((surface_water == null) ? 0 : surface_water.hashCode());
+		result = prime * result + ((rotationPeriod == null) ? 0 : rotationPeriod.hashCode());
+		result = prime * result + ((surfaceWater == null) ? 0 : surfaceWater.hashCode());
 		result = prime * result + ((terrain == null) ? 0 : terrain.hashCode());
 		result = prime * result + ((url == null) ? 0 : url.hashCode());
 		return result;
@@ -197,10 +203,10 @@ public class Planet implements Serializable{
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (orbital_period == null) {
-			if (other.orbital_period != null)
+		if (orbitalPeriod == null) {
+			if (other.orbitalPeriod != null)
 				return false;
-		} else if (!orbital_period.equals(other.orbital_period))
+		} else if (!orbitalPeriod.equals(other.orbitalPeriod))
 			return false;
 		if (population == null) {
 			if (other.population != null)
@@ -212,15 +218,15 @@ public class Planet implements Serializable{
 				return false;
 		} else if (!residents.equals(other.residents))
 			return false;
-		if (rotation_period == null) {
-			if (other.rotation_period != null)
+		if (rotationPeriod == null) {
+			if (other.rotationPeriod != null)
 				return false;
-		} else if (!rotation_period.equals(other.rotation_period))
+		} else if (!rotationPeriod.equals(other.rotationPeriod))
 			return false;
-		if (surface_water == null) {
-			if (other.surface_water != null)
+		if (surfaceWater == null) {
+			if (other.surfaceWater != null)
 				return false;
-		} else if (!surface_water.equals(other.surface_water))
+		} else if (!surfaceWater.equals(other.surfaceWater))
 			return false;
 		if (terrain == null) {
 			if (other.terrain != null)
@@ -234,6 +240,6 @@ public class Planet implements Serializable{
 			return false;
 		return true;
 	}
-	
     
+	
 }

@@ -1,0 +1,29 @@
+package com.swapi;
+
+import java.io.Serializable;
+import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
+
+public class Planet implements Serializable{
+
+    private String name;
+    @SerializedName("rotation_period")
+    private String rotationPeriod;
+    @SerializedName("orbital_period")
+    private String orbitalPeriod;
+    private String diameter;
+    private String climate;
+    private String gravity;
+    private String terrain;
+    @SerializedName("surface_water")
+    private String surfaceWater;
+    private String population;
+    private List<String> residents;
+    private List<String> films;
+    private String created;
+    private String edited;
+    private String url;
+    
+	
+}

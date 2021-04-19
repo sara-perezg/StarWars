@@ -1,9 +1,0 @@
-package com.swapi;
-
-import retrofit2.Retrofit;
-public class Main {
-
-	public static void main(String[] args) {
-		
-	}
-}

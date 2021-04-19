@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="retrofit2.http.Path"/>
+    <fullyQualifiedTypeName name="retrofit2.http.Query"/>
+    <fullyQualifiedTypeName name="retrofit2.Retrofit"/>
+    <fullyQualifiedTypeName name="retrofit2.Retrofit.Builder"/>
+    <fullyQualifiedTypeName name="retrofit2.Call"/>
+    <fullyQualifiedTypeName name="retrofit2.converter.gson.GsonConverterFactory"/>
+    <fullyQualifiedTypeName name="retrofit2.Callback"/>
+    <fullyQualifiedTypeName name="retrofit2.Response"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+</qualifiedTypeNameHistroy>

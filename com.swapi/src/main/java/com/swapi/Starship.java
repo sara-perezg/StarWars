@@ -9,44 +9,49 @@ public class Starship implements Serializable{
     private String name;
     private String model;
     private String manufacturer;
-    private String cost_in_credits;
+    @SerializedName("cost_in_credits")
+    private String costInCredits;
     private String length;
-    private String max_atmosphering_speed;
+    @SerializedName("max_atmosphering_speed")
+    private String maxAtmospheringSpeed;
     private String crew;
     private String passengers;
     private String cargo_capacity;
     private String consumables;
-    private String hyperdrive_rating;
+    @SerializedName("hyperdrive_rating")
+    private String hyperdriveRating;
     @SerializedName("MGLT")
     private String mglt;
-    private String starship_class;
+    @SerializedName("starship_class")
+    private String starshipClass;
     private List<Object> pilots;
     private List<String> films;
     private String created;
     private String edited;
     private String url;
+    
 	public Starship() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Starship(String name, String model, String manufacturer, String cost_in_credits, String length,
-			String max_atmosphering_speed, String crew, String passengers, String cargo_capacity, String consumables,
-			String hyperdrive_rating, String mglt, String starship_class, List<Object> pilots, List<String> films,
+	public Starship(String name, String model, String manufacturer, String costInCredits, String length,
+			String maxAtmospheringSpeed, String crew, String passengers, String cargo_capacity, String consumables,
+			String hyperdriveRating, String mglt, String starshipClass, List<Object> pilots, List<String> films,
 			String created, String edited, String url) {
 		super();
 		this.name = name;
 		this.model = model;
 		this.manufacturer = manufacturer;
-		this.cost_in_credits = cost_in_credits;
+		this.costInCredits = costInCredits;
 		this.length = length;
-		this.max_atmosphering_speed = max_atmosphering_speed;
+		this.maxAtmospheringSpeed = maxAtmospheringSpeed;
 		this.crew = crew;
 		this.passengers = passengers;
 		this.cargo_capacity = cargo_capacity;
 		this.consumables = consumables;
-		this.hyperdrive_rating = hyperdrive_rating;
+		this.hyperdriveRating = hyperdriveRating;
 		this.mglt = mglt;
-		this.starship_class = starship_class;
+		this.starshipClass = starshipClass;
 		this.pilots = pilots;
 		this.films = films;
 		this.created = created;
@@ -71,11 +76,11 @@ public class Starship implements Serializable{
 	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
-	public String getCost_in_credits() {
-		return cost_in_credits;
+	public String getCostInCredits() {
+		return costInCredits;
 	}
-	public void setCost_in_credits(String cost_in_credits) {
-		this.cost_in_credits = cost_in_credits;
+	public void setCostInCredits(String costInCredits) {
+		this.costInCredits = costInCredits;
 	}
 	public String getLength() {
 		return length;
@@ -83,11 +88,11 @@ public class Starship implements Serializable{
 	public void setLength(String length) {
 		this.length = length;
 	}
-	public String getMax_atmosphering_speed() {
-		return max_atmosphering_speed;
+	public String getMaxAtmospheringSpeed() {
+		return maxAtmospheringSpeed;
 	}
-	public void setMax_atmosphering_speed(String max_atmosphering_speed) {
-		this.max_atmosphering_speed = max_atmosphering_speed;
+	public void setMaxAtmospheringSpeed(String maxAtmospheringSpeed) {
+		this.maxAtmospheringSpeed = maxAtmospheringSpeed;
 	}
 	public String getCrew() {
 		return crew;
@@ -113,11 +118,11 @@ public class Starship implements Serializable{
 	public void setConsumables(String consumables) {
 		this.consumables = consumables;
 	}
-	public String getHyperdrive_rating() {
-		return hyperdrive_rating;
+	public String getHyperdriveRating() {
+		return hyperdriveRating;
 	}
-	public void setHyperdrive_rating(String hyperdrive_rating) {
-		this.hyperdrive_rating = hyperdrive_rating;
+	public void setHyperdriveRating(String hyperdriveRating) {
+		this.hyperdriveRating = hyperdriveRating;
 	}
 	public String getMglt() {
 		return mglt;
@@ -125,11 +130,11 @@ public class Starship implements Serializable{
 	public void setMglt(String mglt) {
 		this.mglt = mglt;
 	}
-	public String getStarship_class() {
-		return starship_class;
+	public String getStarshipClass() {
+		return starshipClass;
 	}
-	public void setStarship_class(String starship_class) {
-		this.starship_class = starship_class;
+	public void setStarshipClass(String starshipClass) {
+		this.starshipClass = starshipClass;
 	}
 	public List<Object> getPilots() {
 		return pilots;
@@ -163,12 +168,12 @@ public class Starship implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Starships [name=" + name + ", model=" + model + ", manufacturer=" + manufacturer + ", cost_in_credits="
-				+ cost_in_credits + ", length=" + length + ", max_atmosphering_speed=" + max_atmosphering_speed
-				+ ", crew=" + crew + ", passengers=" + passengers + ", cargo_capacity=" + cargo_capacity
-				+ ", consumables=" + consumables + ", hyperdrive_rating=" + hyperdrive_rating + ", mglt=" + mglt
-				+ ", starship_class=" + starship_class + ", pilots=" + pilots + ", films=" + films + ", created="
-				+ created + ", edited=" + edited + ", url=" + url + "]";
+		return "Starship [name=" + name + ", model=" + model + ", manufacturer=" + manufacturer + ", costInCredits="
+				+ costInCredits + ", length=" + length + ", maxAtmospheringSpeed=" + maxAtmospheringSpeed + ", crew="
+				+ crew + ", passengers=" + passengers + ", cargo_capacity=" + cargo_capacity + ", consumables="
+				+ consumables + ", hyperdriveRating=" + hyperdriveRating + ", mglt=" + mglt + ", starshipClass="
+				+ starshipClass + ", pilots=" + pilots + ", films=" + films + ", created=" + created + ", edited="
+				+ edited + ", url=" + url + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -176,21 +181,21 @@ public class Starship implements Serializable{
 		int result = 1;
 		result = prime * result + ((cargo_capacity == null) ? 0 : cargo_capacity.hashCode());
 		result = prime * result + ((consumables == null) ? 0 : consumables.hashCode());
-		result = prime * result + ((cost_in_credits == null) ? 0 : cost_in_credits.hashCode());
+		result = prime * result + ((costInCredits == null) ? 0 : costInCredits.hashCode());
 		result = prime * result + ((created == null) ? 0 : created.hashCode());
 		result = prime * result + ((crew == null) ? 0 : crew.hashCode());
 		result = prime * result + ((edited == null) ? 0 : edited.hashCode());
 		result = prime * result + ((films == null) ? 0 : films.hashCode());
-		result = prime * result + ((hyperdrive_rating == null) ? 0 : hyperdrive_rating.hashCode());
+		result = prime * result + ((hyperdriveRating == null) ? 0 : hyperdriveRating.hashCode());
 		result = prime * result + ((length == null) ? 0 : length.hashCode());
 		result = prime * result + ((manufacturer == null) ? 0 : manufacturer.hashCode());
-		result = prime * result + ((max_atmosphering_speed == null) ? 0 : max_atmosphering_speed.hashCode());
+		result = prime * result + ((maxAtmospheringSpeed == null) ? 0 : maxAtmospheringSpeed.hashCode());
 		result = prime * result + ((mglt == null) ? 0 : mglt.hashCode());
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((passengers == null) ? 0 : passengers.hashCode());
 		result = prime * result + ((pilots == null) ? 0 : pilots.hashCode());
-		result = prime * result + ((starship_class == null) ? 0 : starship_class.hashCode());
+		result = prime * result + ((starshipClass == null) ? 0 : starshipClass.hashCode());
 		result = prime * result + ((url == null) ? 0 : url.hashCode());
 		return result;
 	}
@@ -213,10 +218,10 @@ public class Starship implements Serializable{
 				return false;
 		} else if (!consumables.equals(other.consumables))
 			return false;
-		if (cost_in_credits == null) {
-			if (other.cost_in_credits != null)
+		if (costInCredits == null) {
+			if (other.costInCredits != null)
 				return false;
-		} else if (!cost_in_credits.equals(other.cost_in_credits))
+		} else if (!costInCredits.equals(other.costInCredits))
 			return false;
 		if (created == null) {
 			if (other.created != null)
@@ -238,10 +243,10 @@ public class Starship implements Serializable{
 				return false;
 		} else if (!films.equals(other.films))
 			return false;
-		if (hyperdrive_rating == null) {
-			if (other.hyperdrive_rating != null)
+		if (hyperdriveRating == null) {
+			if (other.hyperdriveRating != null)
 				return false;
-		} else if (!hyperdrive_rating.equals(other.hyperdrive_rating))
+		} else if (!hyperdriveRating.equals(other.hyperdriveRating))
 			return false;
 		if (length == null) {
 			if (other.length != null)
@@ -253,10 +258,10 @@ public class Starship implements Serializable{
 				return false;
 		} else if (!manufacturer.equals(other.manufacturer))
 			return false;
-		if (max_atmosphering_speed == null) {
-			if (other.max_atmosphering_speed != null)
+		if (maxAtmospheringSpeed == null) {
+			if (other.maxAtmospheringSpeed != null)
 				return false;
-		} else if (!max_atmosphering_speed.equals(other.max_atmosphering_speed))
+		} else if (!maxAtmospheringSpeed.equals(other.maxAtmospheringSpeed))
 			return false;
 		if (mglt == null) {
 			if (other.mglt != null)
@@ -283,10 +288,10 @@ public class Starship implements Serializable{
 				return false;
 		} else if (!pilots.equals(other.pilots))
 			return false;
-		if (starship_class == null) {
-			if (other.starship_class != null)
+		if (starshipClass == null) {
+			if (other.starshipClass != null)
 				return false;
-		} else if (!starship_class.equals(other.starship_class))
+		} else if (!starshipClass.equals(other.starshipClass))
 			return false;
 		if (url == null) {
 			if (other.url != null)
@@ -296,5 +301,5 @@ public class Starship implements Serializable{
 		return true;
 	}
     
-    
+	
 }

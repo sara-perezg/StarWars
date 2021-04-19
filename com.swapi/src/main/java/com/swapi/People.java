@@ -1,18 +1,23 @@
 package com.swapi;
 
 import java.util.List;
+import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
+
 public class People implements Serializable{
 
 	private String name;
-	private String birth_year;
+    @SerializedName("birth_year")
+	private String birthYear;
 	private List<String> films;
 	private String gender;
-	private String hair_color;
+    @SerializedName("hair_color")
+	private String hairColor;
 	private String height;
 	private String homeworld;
 	private String mass;
-	private String skin_color;
+	@SerializedName("skin_color")
+	private String skinColor;
 	private String created;
 	private String edited;
 	private String url;
@@ -24,20 +29,19 @@ public class People implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public People(String name, String birth_year, List<String> films, String gender, String hair_color, String height,
-			String homeworld, String mass, String skin_color, String created, String edited, String url,
+	public People(String name, String birthYear, List<String> films, String gender, String hairColor, String height,
+			String homeworld, String mass, String skinColor, String created, String edited, String url,
 			List<String> species, List<String> starships, List<String> vehicles) {
 		super();
 		this.name = name;
-		this.birth_year = birth_year;
+		this.birthYear = birthYear;
 		this.films = films;
 		this.gender = gender;
-		this.hair_color = hair_color;
+		this.hairColor = hairColor;
 		this.height = height;
 		this.homeworld = homeworld;
 		this.mass = mass;
-		this.skin_color = skin_color;
+		this.skinColor = skinColor;
 		this.created = created;
 		this.edited = edited;
 		this.url = url;
@@ -45,157 +49,124 @@ public class People implements Serializable{
 		this.starships = starships;
 		this.vehicles = vehicles;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public String getBirth_year() {
-		return birth_year;
+	public String getBirthYear() {
+		return birthYear;
 	}
-
-	public void setBirth_year(String birth_year) {
-		this.birth_year = birth_year;
+	public void setBirthYear(String birthYear) {
+		this.birthYear = birthYear;
 	}
-
 	public List<String> getFilms() {
 		return films;
 	}
-
 	public void setFilms(List<String> films) {
 		this.films = films;
 	}
-
 	public String getGender() {
 		return gender;
 	}
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	public String getHair_color() {
-		return hair_color;
+	public String getHairColor() {
+		return hairColor;
 	}
-
-	public void setHair_color(String hair_color) {
-		this.hair_color = hair_color;
+	public void setHairColor(String hairColor) {
+		this.hairColor = hairColor;
 	}
-
 	public String getHeight() {
 		return height;
 	}
-
 	public void setHeight(String height) {
 		this.height = height;
 	}
-
 	public String getHomeworld() {
 		return homeworld;
 	}
-
 	public void setHomeworld(String homeworld) {
 		this.homeworld = homeworld;
 	}
-
 	public String getMass() {
 		return mass;
 	}
-
 	public void setMass(String mass) {
 		this.mass = mass;
 	}
-
-	public String getSkin_color() {
-		return skin_color;
+	public String getSkinColor() {
+		return skinColor;
 	}
-
-	public void setSkin_color(String skin_color) {
-		this.skin_color = skin_color;
+	public void setSkinColor(String skinColor) {
+		this.skinColor = skinColor;
 	}
-
 	public String getCreated() {
 		return created;
 	}
-
 	public void setCreated(String created) {
 		this.created = created;
 	}
-
 	public String getEdited() {
 		return edited;
 	}
-
 	public void setEdited(String edited) {
 		this.edited = edited;
 	}
-
 	public String getUrl() {
 		return url;
 	}
-
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
 	public List<String> getSpecies() {
 		return species;
 	}
-
 	public void setSpecies(List<String> species) {
 		this.species = species;
 	}
-
 	public List<String> getStarships() {
 		return starships;
 	}
-
 	public void setStarships(List<String> starships) {
 		this.starships = starships;
 	}
-
 	public List<String> getVehicles() {
 		return vehicles;
 	}
-
 	public void setVehicles(List<String> vehicles) {
 		this.vehicles = vehicles;
 	}
-
 	@Override
 	public String toString() {
-		return "People [name=" + name + ", birth_year=" + birth_year + ", films=" + films + ", gender=" + gender
-				+ ", hair_color=" + hair_color + ", height=" + height + ", homeworld=" + homeworld + ", mass=" + mass
-				+ ", skin_color=" + skin_color + ", created=" + created + ", edited=" + edited + ", url=" + url
+		return "People [name=" + name + ", birthYear=" + birthYear + ", films=" + films + ", gender=" + gender
+				+ ", hairColor=" + hairColor + ", height=" + height + ", homeworld=" + homeworld + ", mass=" + mass
+				+ ", skinColor=" + skinColor + ", created=" + created + ", edited=" + edited + ", url=" + url
 				+ ", species=" + species + ", starships=" + starships + ", vehicles=" + vehicles + "]";
 	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((birth_year == null) ? 0 : birth_year.hashCode());
+		result = prime * result + ((birthYear == null) ? 0 : birthYear.hashCode());
 		result = prime * result + ((created == null) ? 0 : created.hashCode());
 		result = prime * result + ((edited == null) ? 0 : edited.hashCode());
 		result = prime * result + ((films == null) ? 0 : films.hashCode());
 		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
-		result = prime * result + ((hair_color == null) ? 0 : hair_color.hashCode());
+		result = prime * result + ((hairColor == null) ? 0 : hairColor.hashCode());
 		result = prime * result + ((height == null) ? 0 : height.hashCode());
 		result = prime * result + ((homeworld == null) ? 0 : homeworld.hashCode());
 		result = prime * result + ((mass == null) ? 0 : mass.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((skin_color == null) ? 0 : skin_color.hashCode());
+		result = prime * result + ((skinColor == null) ? 0 : skinColor.hashCode());
 		result = prime * result + ((species == null) ? 0 : species.hashCode());
 		result = prime * result + ((starships == null) ? 0 : starships.hashCode());
 		result = prime * result + ((url == null) ? 0 : url.hashCode());
 		result = prime * result + ((vehicles == null) ? 0 : vehicles.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -205,10 +176,10 @@ public class People implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		People other = (People) obj;
-		if (birth_year == null) {
-			if (other.birth_year != null)
+		if (birthYear == null) {
+			if (other.birthYear != null)
 				return false;
-		} else if (!birth_year.equals(other.birth_year))
+		} else if (!birthYear.equals(other.birthYear))
 			return false;
 		if (created == null) {
 			if (other.created != null)
@@ -230,10 +201,10 @@ public class People implements Serializable{
 				return false;
 		} else if (!gender.equals(other.gender))
 			return false;
-		if (hair_color == null) {
-			if (other.hair_color != null)
+		if (hairColor == null) {
+			if (other.hairColor != null)
 				return false;
-		} else if (!hair_color.equals(other.hair_color))
+		} else if (!hairColor.equals(other.hairColor))
 			return false;
 		if (height == null) {
 			if (other.height != null)
@@ -255,10 +226,10 @@ public class People implements Serializable{
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (skin_color == null) {
-			if (other.skin_color != null)
+		if (skinColor == null) {
+			if (other.skinColor != null)
 				return false;
-		} else if (!skin_color.equals(other.skin_color))
+		} else if (!skinColor.equals(other.skinColor))
 			return false;
 		if (species == null) {
 			if (other.species != null)
@@ -282,7 +253,6 @@ public class People implements Serializable{
 			return false;
 		return true;
 	}
-	
 	
 	
 }
